@@ -1,0 +1,27 @@
+{
+  "name": "BibliaBackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "prisma": "^5.8.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.8.0",
+    "@fastify/cors": "^8.4.0",
+    "cors": "^2.8.5",
+    "fastify": "^4.23.2"
+  }
+}
