@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -19,8 +16,9 @@ model Book {
 
 model Chapter {
   id     String  @id @default(uuid())
-  verses Verse[]
+  verses Verse[] @relation("VerseToChapter")
   bookId String
+  teste  String
   Book   Book    @relation(fields: [bookId], references: [id])
 }
 
@@ -28,5 +26,5 @@ model Verse {
   id        String  @id @default(uuid())
   content   String
   chapterId String
-  Chapter   Chapter @relation(fields: [chapterId], references: [id])
+  Chapter   Chapter @relation("VerseToChapter", fields: [chapterId], references: [id])
 }
