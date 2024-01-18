@@ -9,7 +9,7 @@
     "start": "node dist/server.js"
   },
   "prisma": {
-    "seed": "prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +22,10 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@prisma/client": "^5.8.0",
     "@fastify/cors": "^8.4.0",
+    "@prisma/client": "^5.8.0",
     "cors": "^2.8.5",
-    "fastify": "^4.23.2"
+    "fastify": "^4.23.2",
+    "ts-node": "^10.9.2"
   }
 }
