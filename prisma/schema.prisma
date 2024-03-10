@@ -18,7 +18,6 @@ model Chapter {
   id     String  @id @default(uuid())
   verses Verse[] @relation("VerseToChapter")
   bookId String
-  teste  String
   Book   Book    @relation(fields: [bookId], references: [id])
 }
 
