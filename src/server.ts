@@ -7,6 +7,9 @@ app.register(fastifyCors, {
   origin: '*',
 });
 
+import { getBooks } from "./routes";
+
+app.register(getBooks);
 
 const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
 

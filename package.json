@@ -26,6 +26,7 @@
     "@fastify/cors": "^8.4.0",
     "@prisma/client": "^5.10.2",
     "cors": "^2.8.5",
-    "fastify": "^4.23.2"
+    "fastify": "^4.23.2",
+    "node-fetch": "^3.3.2"
   }
 }
