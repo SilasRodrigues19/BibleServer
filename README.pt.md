@@ -94,7 +94,7 @@ Tecnologias utilizadas no projeto.
     pnpm i
     ```
 
-3.  Renomeie .env.example para .env
+3.  Rename .env.example to .env
 
     ```sh
     cp .env.example .env
