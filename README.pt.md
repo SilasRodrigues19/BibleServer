@@ -1,34 +1,21 @@
 [![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url][![MIT License][license-shield]][license-url]
 
-<!-- 
-
-CTRL + H
-
-Find    -> <REPO_NAME>
-Replace -> Repo name   [e.g. Portfolio]
-
-
-Find    -> <PORT>
-Replace -> Port number [e.g. 4321]
-
--->
-
 <!-- PROJECT LOGO -->
 
 <br />
 <samp>
 <p align="center">
-  <a href="https://github.com/SilasRodrigues19/<REPO_NAME>">
+  <a href="https://github.com/SilasRodrigues19/BibleServer">
     <img src="./public/assets/logo.svg" alt="Logo" width="100" height="80">
   </a>
 
-  <h3 align="center" id="bio">Project Name</h3>
+  <h3 align="center" id="bio">Bible Server</h3>
 
   <p align="center">
-    Short project description
+    Biblical Books
     <br />
     <a href="#">Demo</a>
-    <a href="https://github.com/SilasRodrigues19/<REPO_NAME>/issues">Report Bug</a>
+    <a href="https://github.com/SilasRodrigues19/BibleServer/issues">Report Bug</a>
   </p>
 </p>
 
@@ -49,6 +36,7 @@ Replace -> Port number [e.g. 4321]
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#references"></a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -59,14 +47,18 @@ Replace -> Port number [e.g. 4321]
 
 ## Sobre o projeto
 
-| Nome descritivo da captura de tela             |
+| /livros endpoint                               |
 | ---------------------------------------------- |
 | [![Preview][project-screenshot]][project-link] |
-| Breve contexto adicional                       |
+| Versões:                                       |
+| NVI - Nova Versão Internacional                |
+| ACF - Almeida Corrigida e Fiel                 |
+| AA - Almeida Revisada Imprensa Bíblica         |
 
 <hr>
 
-Descrição detalhada do projeto
+Bible Server é um projeto que visa fornecer dados em formato json para livros bíblicos. O projeto é open source e pode ser utilizado por qualquer pessoa que queira utilizar os dados em seus projetos.
+Esses dados serão consumidos em outra aplicação que será desenvolvida, para fornecer acesso a esses dados online para leitura.
 
 ### Construído com
 
@@ -74,25 +66,17 @@ Tecnologias utilizadas no projeto.
 
 ### Bibliotecas
 
--   [exemplo.js](https://example.js)Breve descrição explicando o que a biblioteca faz
-
--   [exemplo2.js](https://example2.js)Breve descrição explicando o que a biblioteca faz
+-   [chupar](https://tsup.egoist.dev/)Agrupe sua biblioteca TypeScript sem configuração, com tecnologia esbuild.
 
 ### Estruturas
 
--   [exemplo](https://example.com/)Breve descrição explicando o que a estrutura faz
-
--   [exemplo](https://example.com/)Breve descrição explicando o que a estrutura faz
-
-### Plug-ins
-
--   [@exemplo](https://example.com/)Breve descrição explicando o que o plugin faz
+-   [Fastificar](https://fastify.dev/)Breve descrição explicando o que a estrutura faz
 
 ### Tecnologias
 
--   [Texto datilografado](https://www.typescriptlang.org/)Breve descrição explicando a tecnologia
+-   [Texto datilografado](https://www.typescriptlang.org/)Uma linguagem de programação fortemente tipada baseada em JavaScript, oferecendo melhores ferramentas em qualquer escala.
 
-### Outras coisas (se necessário)
+-   [Prisma](https://www.prisma.io/)Node.js e TypeScript ORM de última geração.
 
 <!-- GETTING STARTED -->
 
@@ -101,7 +85,7 @@ Tecnologias utilizadas no projeto.
 1.  Clonar o repositório
 
     ```sh
-    git clone https://github.com/SilasRodrigues19/<REPO_NAME>.git
+    git clone https://github.com/SilasRodrigues19/BibleServer.git
     ```
 
 2.  Instale dependências (você pode usar npm, pnpm, yarn ou qualquer outra coisa)
@@ -110,25 +94,44 @@ Tecnologias utilizadas no projeto.
     pnpm i
     ```
 
-3.  No diretório do projeto, você pode executar com o seguinte
+3.  Renomeie .env.example para .env
+
+    ```sh
+    cp .env.example .env
+    ```
+
+4.  Passos Prisma
+
+    ```sh
+    pnpm prisma generate
+    pnpm prisma migrate dev
+    ```
+
+5.  No diretório do projeto, você pode executar com o seguinte
 
     ```sh
     pnpm run dev
     ```
 
-4.  Caso a URL não abra automaticamente, acesse este link em seu navegador.
+6.  Caso a URL não abra automaticamente, acesse este link em seu navegador.
 
     ```sh
-      http://localhost:<PORT>/
+      http://localhost:3333/
     ```
 
-5.  Para acessar no seu smartphone, use a mesma rede e substitua`localhost`com o endereço da máquina.`e.g. http://10.0.0.38:<PORT>`
+7.  Para acessar no seu smartphone, use a mesma rede e substitua`localhost`com o endereço da máquina.`e.g. http://10.0.0.38:3333`
 
           IPv4 Address: 10.0.0.38
-          Port: <PORT>
-          Access URL: http://10.0.0.38:<PORT>
+          Port: 3333
+          Access URL: http://10.0.0.38:3333
 
-    <!-- CONTRIBUTING -->
+<!-- REFERENCES -->
+
+## Referências
+
+-   [thiago bodruk/biblia](https://github.com/thiagobodruk/biblia)Utilizei os dados json fornecidos pelo repo do Thiago e posteriormente serializei esses dados para preencher meu banco de dados e utilizar as informações posteriormente.
+
+<!-- CONTRIBUTING -->
 
 ## Contribuindo
 
@@ -152,36 +155,36 @@ Distribuído sob a licença MIT. Ver`LICENSE`Para maiores informações.
 
 Silas Rodrigues[@Jinue1](https://twitter.com/jinuye1)-[silasrodrigues.fatec@gmail.com](mailto:silasrodrigues.fatec@gmail.com)
 
-Link do projeto:<https://github.com/SilasRodrigues19/<REPO_NAME>><br>
+Link do projeto:<https://github.com/SilasRodrigues19/BibleServer><br>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/<REPO_NAME>.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/BibleServer.svg?style=for-the-badge
 
-[contributors-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/graphs/contributors
+[contributors-url]: https://github.com/SilasRodrigues19/BibleServer/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/<REPO_NAME>.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/BibleServer.svg?style=for-the-badge
 
-[forks-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/network/members
+[forks-url]: https://github.com/SilasRodrigues19/BibleServer/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/<REPO_NAME>.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/BibleServer.svg?style=for-the-badge
 
-[stars-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/stargazers
+[stars-url]: https://github.com/SilasRodrigues19/BibleServer/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/<REPO_NAME>.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/BibleServer.svg?style=for-the-badge
 
-[issues-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/issues
+[issues-url]: https://github.com/SilasRodrigues19/BibleServer/issues
 
-[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/<REPO_NAME>.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/BibleServer.svg?style=for-the-badge
 
-[license-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/blob/master/LICENSE
+[license-url]: https://github.com/SilasRodrigues19/BibleServer/blob/master/LICENSE
 
-[license-url]: https://github.com/SilasRodrigues19/<REPO_NAME>/blob/master/LICENSE.txt
+[license-url]: https://github.com/SilasRodrigues19/BibleServer/blob/master/LICENSE.txt
 
 [project-screenshot]: ./public/screenshots/preview.png
 
 [project-link]: https://example.vercel.app
 
-<br><hr>[🔼 Voltar ao topo](#project-name)
+<br><hr>[🔼 Voltar ao topo](#bible-server)

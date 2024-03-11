@@ -184,4 +184,4 @@ Project Link: [https://github.com/SilasRodrigues19/BibleServer](https://github.c
 [project-link]: https://example.vercel.app
 
 <br><hr>
-[🔼 Back to top](#Biblical-Books)
+[🔼 Back to top](#bible-server)
