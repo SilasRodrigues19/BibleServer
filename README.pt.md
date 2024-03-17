@@ -141,7 +141,7 @@ As contribuições são o que tornam a comunidade de código aberto um lugar inc
 2.  Crie sua ramificação de recursos (`git checkout -b feature/AmazingFeature`)
 3.  Confirme suas alterações (`git commit -m 'Add some AmazingFeature'`)
 4.  Empurre para a filial (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+5.  Abra uma solicitação pull
 
 <!-- LICENSE -->
 
